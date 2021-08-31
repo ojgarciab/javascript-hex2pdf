@@ -1,5 +1,5 @@
 /* Encapsulamos la funcionalidad en una clase */
-class Hexa2Pdf {
+class DecodificaHexa {
     constructor (datosHexa, tipoMime = "application/force-download") {
         /* Dividimos la cadena en parejas de caracteres hexadecimales */
         const parejas = datosHexa.match(/.{1,2}/g);
@@ -20,4 +20,4 @@ class Hexa2Pdf {
 }
 
 /* Exportamos la clase */
-export { Hexa2Pdf };
+export { DecodificaHexa };

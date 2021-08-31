@@ -1,18 +1,18 @@
 /* Importamos la clase */
-import { Hexa2Pdf } from './Hexa2Pdf.js';
+import { DecodificaHexa } from './DecodificaHexa.js';
 
 function verPdf() {
     /* Un único parámetro con la cadena de caracteres en hexadecimal */
     const [ hexadecimal, destino ] = arguments;
     /* Creamos una instancia de nuestra clase */
-    const hexa2pdf = new Hexa2Pdf(hexadecimal, "application/pdf");
+    const hexa = new DecodificaHexa(hexadecimal, "application/pdf");
     /* Dependiendo del botón, realizamos una acción diferente */
     switch (destino) {
         case "pestaña":
-            window.open(hexa2pdf.url, "_blank");
+            window.open(hexa.url, "_blank");
             break;
         case "marco":
-            iframe.src = hexa2pdf.url;
+            iframe.src = hexa.url;
             break;
         default:
             console.error("Se ha recibido un destino incorrecto:", destino);
